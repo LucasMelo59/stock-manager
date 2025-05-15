@@ -19,7 +19,6 @@ public class UserController {
     }
 
     @PostMapping
-    @RequestMapping("/register")
     public Long registerUser(@RequestBody UserForm form) {
         return service.registerUser(form);
     }

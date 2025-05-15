@@ -35,7 +35,7 @@ public class User {
 
     private Boolean active = true;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonIgnore
     private List<UserDocumentation> documentations;
 
